@@ -72,7 +72,7 @@ public class PaintTube {
 	}
 	void chageConnectionlines(Point dragpoint) {
 		if(Connectlines.isEmpty()) {
-			System.out.println("づ");
+			
 		}else {
 			int  p = 0;
 			for(int i = 0; i < Connectlines.size();i++) {
@@ -118,7 +118,6 @@ public class PaintTube {
 			&& p2.x >=Connectlines.elementAt(i).p[0].x && p2.y >= Connectlines.elementAt(i).p[0].y
 			&& p2.x >=Connectlines.elementAt(i).p[1].x && p2.y >= Connectlines.elementAt(i).p[1].y) {
 				Connectlines.elementAt(i).isSelected = true;
-				System.out.println("┳�[퐑1");
 			}
 		}
 	}
@@ -144,7 +143,7 @@ public class PaintTube {
 				if(Connectlines.elementAt(i).isSelected) {
 					Connectlines.elementAt(i).isSelected = false;
 					tmpshape.addConnectline(Connectlines.elementAt(i));
-					System.out.println("┳�[퐑2");
+					
 				}
 			}
 			for(int i = 0; i < tmpshape.SizeGroupShapes();i++) {
@@ -152,7 +151,6 @@ public class PaintTube {
 			}
 			for(int i = 0; i < tmpshape.SizeGroupConnectlines();i++) {
 				Connectlines.remove(tmpshape.elementAtGroupConnectlines(i));
-				System.out.println("┳쬟퐑1");
 			}
 			Shapes.add(tmpshape);
 		}
@@ -169,14 +167,14 @@ public class PaintTube {
 			tmpshape.clearConnectionLine();
 			removeLineOfGroup();
 			Shapes.remove(tmpshape);
-			System.out.println("tmpshape ungroup");
+			
 		}
 	}
 	void removeLineOfGroup() {
 		for(int i = 0; i < Connectlines.size();i++) {
 			if(Connectlines.elementAt(i).firstConnect.equals(tmpshape) 
 				|| Connectlines.elementAt(i).secondConnect.equals(tmpshape)) {
-				System.out.println("group ┳퐑:" + i);
+				
 				tmpCt.add(Connectlines.elementAt(i));
 			}
 		}

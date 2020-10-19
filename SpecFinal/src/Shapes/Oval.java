@@ -13,16 +13,16 @@ public class Oval extends Shape{
 		this.initialpoint = new Point(p);
 		this.connectpoint[0] = new Point(p.x + width, p.y + (height/2));		//東
 		this.connectpoint[1] = new Point(p.x + (width/2), p.y + height);		//南
-		this.connectpoint[2] = new Point(p.x,p.y + (height/2));				//西
-		this.connectpoint[3] = new Point(p.x + (width/2), p.y);				//北
+		this.connectpoint[2] = new Point(p.x,p.y + (height/2));					//西
+		this.connectpoint[3] = new Point(p.x + (width/2), p.y);					//北
 		this.centerpoint = new Point(p.x + (width/2), p.y + (height/2));
 	}
 	public void getPoint(Point p) {
 		this.initialpoint = new Point(p);
 		this.connectpoint[0] = new Point(p.x + width, p.y + (height/2));		//東
 		this.connectpoint[1] = new Point(p.x + (width/2), p.y + height);		//南
-		this.connectpoint[2] = new Point(p.x,p.y + (height/2));				//西
-		this.connectpoint[3] = new Point(p.x + (width/2), p.y);				//北
+		this.connectpoint[2] = new Point(p.x,p.y + (height/2));					//西
+		this.connectpoint[3] = new Point(p.x + (width/2), p.y);					//北
 		this.centerpoint = new Point(p.x + (width/2), p.y + (height/2));
 	}
 	public boolean isInShape(Point t) {

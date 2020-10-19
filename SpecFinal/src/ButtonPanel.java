@@ -11,11 +11,11 @@ import mode.ModelFactory;
 
 public class ButtonPanel extends JPanel implements ActionListener {
 	final int funtionNum = 6;
+	// 數字為面板可變 變完需更改modelFactory
 	JButton[] funtionJB = new JButton[funtionNum];
 	ImageIcon[] funtionIcon = new ImageIcon[funtionNum];
 	
 	Mode mode;
-	//public PanelModel PModel = new PanelModel();
 	ButtonPanel(){
 		for(int i = 0; i < funtionNum;i++) {
 			funtionIcon[i] = new ImageIcon("image\\"+ i +".png");
@@ -36,7 +36,6 @@ public class ButtonPanel extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		String cmd = arg0.getActionCommand();
 		mode = ModelFactory.creatMode(Integer.parseInt(cmd));
-		//PModel.ChangeStates(Integer.parseInt(cmd));
 		changeButtonColor(Integer.parseInt(cmd));
 	}
 	void changeButtonColor(int selectfuntionNum) {

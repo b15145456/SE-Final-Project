@@ -100,10 +100,6 @@ public class ConnectionLine extends Shape{
 		this.p[1].x = p[1].x + dragpoint.x - lastdrag.x;
 		this.p[1].y = p[1].y + dragpoint.y - lastdrag.y;
 		lastdrag = new Point(dragpoint);
-		System.out.println("dragpoint:" + dragpoint);
-		System.out.println("lastdrag:" + lastdrag);
-		System.out.println("p[0]:" + p[0]);
-		System.out.println("p[1]:" + p[1]);
 	}
 	public void clearlastdrag() {
 		lastdrag = new Point();

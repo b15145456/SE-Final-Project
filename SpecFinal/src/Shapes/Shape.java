@@ -11,10 +11,10 @@ public class Shape {
 	public Point[] connectpoint = new Point[4];
 	public Point initialpoint;
 	Point lastdrag = new Point();
-	Shape() {
+	public Shape() {
 		
 	}
-	Shape(Point p){
+	public Shape(Point p){
 		this.initialpoint = new Point(p);
 		this.connectpoint[0] = new Point(p.x + width, p.y + (height/2));	//ªF
 		this.connectpoint[1] = new Point(p.x + (width/2), p.y + height);	//«n
@@ -29,8 +29,7 @@ public class Shape {
 		this.connectpoint[3] = new Point(p.x + (width/2), p.y);				//¥_
 	}
 	public boolean isInShape(Point t) {
-		if(t.x<= initialpoint.x + width && t.x >= initialpoint.x	&& t.y >= initialpoint.y && t.y <= initialpoint.y + height) {
-			System.out.println("shape R");
+		if(t.x<= initialpoint.x + width && t.x >= initialpoint.x && t.y >= initialpoint.y && t.y <= initialpoint.y + height) {
 			return true;
 		}else {
 			return false;

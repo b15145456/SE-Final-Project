@@ -20,7 +20,6 @@ public class SelectMode extends Mode{
         }
 	}
 	public void onPressed(Point p,PaintTube pt) {
-		System.out.println("Pressed");
 		pt.cancelAllSelected();
 		pt.firstpoint = new Point(p);
 		pt.tmpshape = pt.PointInWhichShape(pt.firstpoint);
@@ -31,7 +30,6 @@ public class SelectMode extends Mode{
 		}
 	}
 	public void onReleased(Point p, PaintTube pt) {
-		System.out.println("Released");
 		pt.cancelAllSelected();
 		pt.secondpoint = new Point(p);
 		if(pt.Dragflag) {
@@ -47,7 +45,6 @@ public class SelectMode extends Mode{
 		}
 	}
 	public void onDragged(Point p, PaintTube pt) {
-		System.out.println("Dragged");
 		pt.cancelAllSelected();
 		if(pt.Dragflag) {
 			pt.dragpoint = new Point(p.x - pt.firstpoint.x,p.y - pt.firstpoint.y);
